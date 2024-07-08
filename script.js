@@ -113,6 +113,78 @@ viewDataArray()
 
 
 
+// const API = 'http://bootcamp-2024-2d43236510d5.herokuapp.com'
+// const apiExamenes = '/examenes'
+// const apiAlumnos = '/alumnos'
+// const apiRespuestas = '/respuestas'
+// const endpointsArray = [
+//   `${API}${apiAlumnos}`,
+//   `${API}${apiExamenes}`,
+//   `${API}${apiRespuestas}`,
+// ]
+ 
+// const getData = async () => {
+//   const examenesPromise = await fetch(endpointsArray[0])
+//   const alumnosPromise = await fetch(endpointsArray[1])
+//   const respuestasPromise = await fetch(endpointsArray[2])
+ 
+//   const promisesArray = []
+//   promisesArray.push(examenesPromise)
+//   promisesArray.push(alumnosPromise)
+//   promisesArray.push(respuestasPromise)
+ 
+//   const responsesArray = await Promise.all(promisesArray)
+//   const dataArray = await Promise.all(responsesArray.map(r => r.json()))
+ 
+//   return dataArray
+// }
+ 
+// const viewDataArray = async () => {
+//   const data = await getData()
+//   const alumnos = data[0].data
+//   const examenes = data[1].data
+//   const respuestas = data[2].data
+ 
+//   console.log(alumnos)
+//   console.log(examenes)
+//   console.log(respuestas)
+ 
+//   const respuestasFiltradas = []
+ 
+//   for (let i = 1; i <= alumnos.length; i++) {
+//     respuestasFiltradas.push(respuestas.filter(r => r.idAlumno === i))
+//   }
+ 
+//   const examenesFiltrados = respuestasFiltradas.map(arr => {
+//     for (let i = 1; i < examenes.length; i++) {
+//       return arr.filter(r => r.idExamen === i)
+//     }
+//   })
+ 
+//   console.log(examenesFiltrados)
+ 
+//   let examenesID = examenes.map(item => {
+//     const { id } = item
+ 
+//     const examen = {
+//       examenId: id,
+//       preguntas: item.preguntas.map(pregunta => {
+//         let obj = {
+//           preguntaId: pregunta.id,
+//           respuesta: pregunta.opciones.find(opc => opc.esCorrecta == true).id,
+//         }
+//         return obj
+//       }),
+//     }
+ 
+//     return examen
+//   })
+ 
+//   console.log(examenesID)
+// }
+ 
+// viewDataArray()
+ 
 
 
 
